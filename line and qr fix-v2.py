@@ -2,7 +2,7 @@
 Author: 木白广木林
 Date: 2023-11-29 10:45:20
 LastEditors: Do not edit
-LastEditTime: 2023-11-30 17:01:25
+LastEditTime: 2023-12-04 16:20:50
 FilePath: \py\line and qr fix-v2.py
 '''
 '''
@@ -139,6 +139,7 @@ while True:
                 img.save(path + foldername1 + '/' + line2 + ".png") #图片命名  '/'非常重要; 绝对路径‘\\’
 
             else: 
+                print(last_line) #添加不合格不合法数据
                 print('不合法跳过,不合格不打印')
                 pass
         

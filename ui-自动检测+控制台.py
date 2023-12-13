@@ -9,6 +9,7 @@ import os
 import tkinter as tk
 import sys
 
+#控制台输出
 class StdoutRedirector(object):
     def __init__ (self, text_widget):
         self.text_widget = text_widget
@@ -111,6 +112,7 @@ if __name__ == "__main__":
     root.title("蔚来13线--个人版")
 
     # root.state("zoomed") #全屏
+    # root.resizable(0, 0)  # 禁止窗口调整大小
     
     # 添加标签控件
     label = Label(root,text="请输入当前产品序号：",font=("宋体",25),fg="red")
@@ -127,15 +129,12 @@ if __name__ == "__main__":
     button = Button(root,text="确定",font=("宋体",25),fg="blue",command=show)
     # button.grid(row=3,column=2)
     button.pack()
-
     """
-    command=func表示调用最开始定义的func函数。
+    command=show表示调用最开始定义的func函数。
     func函数一定要在这句代码之前，因为这里需要调用这个func函数。
     """
     app = ImageDisplayApp(root, r"E:\360MoveData\Users\bai\Desktop\py\XXX")  # 替换为实际的图片文件夹路径
     root.mainloop()
-
-
 
 # 显示窗口
 # root.mainloop()
